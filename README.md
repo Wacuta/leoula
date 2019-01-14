@@ -1,18 +1,18 @@
-# le ou la
+# Le ou La - Lumen PHP Framework
+## Description
+blablalba
 
-Petit site fun fait en PHP (silex) et SQLite
-Qui permet d'avoir l'avis public sur le genre d'un mot
+2 routes mise en place pour commencer
+```
+GET   /
+GET   /{$mot}
+```
 
-## Comment le lancer ?
+## Official Documentation Lumen
+Documentation pour le framework [Lumen website](https://lumen.laravel.com/docs).
 
-vagrant up --provision
+## Exemple
+Présentation de l'architecture avec exemplte rapide [lien](https://www.codementor.io/seyiadeleke42/creating-your-first-artisan-command-in-lumen-5-5-cvi59gmgl)
 
-Faut faire un 'composer install' aussi
-
-
-
-## le projet
-
-Le site est fait en php et en SQLite pour pouvoir l'heberger sur 
-un serveur mutualiser d'OVH dans lequel la BDD mysql est deja utilisé 
-pour un autre projet.
+## License MIT
+[source](https://opensource.org/licenses/MIT).
