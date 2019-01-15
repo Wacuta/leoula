@@ -9,7 +9,7 @@ html, body {
 
 .container {
 	width: 100%;
-	max-width: 500px;
+	max-width: 550px;
 }
 
 
@@ -20,6 +20,11 @@ https://color.adobe.com/fr/KnotJustNautical-color-theme-2565165/edit/?copy=true
 	background-color: #2C3E50;
 	height: 400px;
 }
+
+.search.full {
+	height: 100%;
+}
+
 .titre {
 	width: 100%;
 	text-align: center;
@@ -98,6 +103,7 @@ input[type="text"].focus {
 .btn {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	padding: 15px;
 }
 
@@ -108,7 +114,7 @@ input[type="text"].focus {
 	margin: 10px auto;
 	cursor: pointer;
 	padding: 0;
-	width: 250px;
+	width: 230px;
 	height: 70px;
 	border-radius: 5px;
 	background: transparent;

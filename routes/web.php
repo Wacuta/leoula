@@ -20,7 +20,7 @@ $router->get('/', [
     'as' => 'index', 
     'uses' => 'HomeController@index'
 ]);
-$router->get('/{mot:[A-Za-z]+}', [
+$router->get('/{mot}', [
     'as' => 'voteWord',
     'uses' => 'HomeController@voteWord'
 ]);

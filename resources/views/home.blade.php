@@ -19,7 +19,7 @@
     </head>
 
     <body>
-        <div class="flex flex-center search">
+        <div class="flex flex-center search @if(!@isset($mot))full @endif">
             <div class="container">
                 <div class="titre">
                     <span class="le">Le</span>	ou	<span class="la">La</span> 
@@ -50,6 +50,7 @@
     </body>
 
     <script src="{{ url('/js/script.js') }}"></script>
+    @if(@isset($mot))
     <script>
     $(function () {
         $(document).ready(function () {
@@ -114,7 +115,6 @@
 
         });
     });
-
     </script>
-
+    @endif
 </html>

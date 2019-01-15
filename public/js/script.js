@@ -3,12 +3,30 @@ let input = $('#search');
 let suggest = $('#search + .suggestion');
 
 if(input) {
-    input.on('keyup', function () {
-        let val = input.val();
-        if(!val || val.length > 1)
-            autocomplete(val);
+    input.on({
+        keyup : function () {
+            let val = input.val();
+            if(!val || val.length > 1)
+                autocomplete(val);
+            else
+                closeSuggest();
+        },
+        click : function () {
+            let val = input.val();
+            if(!val || val.length > 1)
+                suggest.show();
+            else
+                closeSuggest();
+        }
     });
+
 }
+
+$(document).click((e) => {
+    if (!$(e.target).is(input)) {
+        closeSuggest();
+    }
+});
 
 const autocomplete = async function (value) {
     let response = await fetch('/api/mots/search?mot='+value, {
@@ -24,6 +42,7 @@ const autocomplete = async function (value) {
             item.on('click', function(){
                 input.val(mot.libelle);
                 closeSuggest();
+                window.location.replace("/"+mot.libelle);
             })
             suggest.append(item);
         });
