@@ -10,8 +10,8 @@
         <meta name="keywords" content="Le, ou, La, vote, communautaire" />
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         
-        <link rel="stylesheet" type="text/css" href="/css/font.css">
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/font.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}">
 
         <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -32,6 +32,7 @@
                 @if(!@isset($mot))
                 <form>
                     <input id="search" type="text" name="word" autocomplete="off">
+                    <div class="suggestion"></div>
                 </form>
                 @else
                 <div class="btn" id="btndiv">
@@ -48,6 +49,7 @@
 
     </body>
 
+    <script src="{{ url('/js/script.js') }}"></script>
     <script>
     $(function () {
         $(document).ready(function () {

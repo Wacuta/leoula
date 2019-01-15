@@ -41,6 +41,9 @@ https://color.adobe.com/fr/KnotJustNautical-color-theme-2565165/edit/?copy=true
 }
 
 
+form {
+	position: relative;
+}
 
 input[type="text"] {
 	display: block;
@@ -62,6 +65,27 @@ input[type="text"].focus {
 	border-bottom: solid 3px #6DBCDB;
 }
 
+.suggestion {
+	display: block;
+	position: absolute;
+	width: 100%;
+	background-color: white;
+	z-index: 10;
+    border-top: 1px solid #d9d9d9;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.suggestion-result {
+	display: block;
+	margin: auto;
+	padding: 10px;
+	font-family: "Arvo", sans-serif;
+	cursor: pointer;
+}
+
+.suggestion-result:hover {
+	background-color: #fafafa;
+}
 
 /* Partie resutat*/
 

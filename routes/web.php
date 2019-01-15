@@ -26,4 +26,4 @@ $router->get('/{mot:[A-Za-z]+}', [
 ]);
 
 // API
-$router->get('/api/mots/search', 'ApiController@findWord');
+$router->post('/api/mots/search', 'ApiController@findWord');
