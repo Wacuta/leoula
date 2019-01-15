@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Language" content="fr-FR" />
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="author" content="Sboune, Wacuta" />
-        <meta name="decription" content="Le ou La WiFi ? Le ou La nems ?... Voter ce qui vous semble le plus juste." />
+        <meta name="decription" content="Le ou La WiFi ? Le ou La nems ?... Votez ce qui vous semble le plus juste." />
         <meta name="keywords" content="Le, ou, La, vote, communautaire" />
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         
@@ -22,17 +22,16 @@
         <div class="flex flex-center search">
             <div class="container">
                 <div class="titre">
-            
                     <span class="le">Le</span>	ou	<span class="la">La</span> 
                     @isset($mot)
                         {{ $mot }}
                     @endisset
                     ?
                 </div>
-            
+
                 @if(!@isset($mot))
                 <form>
-                <input id="search" type="text" name="word" autocomplete="off">
+                    <input id="search" type="text" name="word" autocomplete="off">
                 </form>
                 @else
                 <div class="btn" id="btndiv">

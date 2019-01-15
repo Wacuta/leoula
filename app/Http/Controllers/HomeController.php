@@ -18,10 +18,8 @@ class HomeController extends Controller
     	return view('home');
     }
 
-    public function voteMot($mot) {
+    public function voteWord($mot) {
     	return view('home', ['mot' => $mot]);
     }
 
-
-    //
 }

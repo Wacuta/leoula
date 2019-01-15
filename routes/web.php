@@ -16,5 +16,14 @@ use App\Http\HomeController;
 //     return $router->app->version();
 // });
 
-$router->get('/', 'HomeController@index');
-$router->get('/{mot:[A-Za-z]+}', 'HomeController@voteMot');
+$router->get('/', [
+    'as' => 'index', 
+    'uses' => 'HomeController@index'
+]);
+$router->get('/{mot:[A-Za-z]+}', [
+    'as' => 'voteWord',
+    'uses' => 'HomeController@voteWord'
+]);
+
+// API
+$router->get('/api/mots/search', 'ApiController@findWord');
